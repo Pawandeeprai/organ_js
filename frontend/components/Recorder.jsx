@@ -41,7 +41,7 @@ var Recorder = React.createClass({
     return (
       <div>
         <button onClick={this._buttonAction}>{this._buttonText()}</button>
-        // <button onClick={this.state.track.play}>Play</button>
+        <button onClick={this.state.track.play.bind(this.state.track)}>Play</button>
       </div>
     );
   }

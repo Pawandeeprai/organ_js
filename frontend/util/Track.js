@@ -32,8 +32,9 @@ Track.prototype.play = function () {
   var playbackCallback = function(){
     var currentTime = new Date();
     var elapsedTime = currentTime - playbackStartTime;
+    // debugger
     var roll = that.roll.slice();
-    if (roll[0].timeSlice <= elapsedTime){
+    if (roll.length !== 0 && roll[0].timeSlice <= elapsedTime){
       that.currentNotes.forEach(function(note) {
         note.stop();
       });
